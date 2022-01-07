@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import List from "./pages/List";
 import NotFound from "./pages/NotFound";
 import Config from "./pages/Config";
+import Example from "./pages/Example";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
         <Link to="/login">Login</Link>
         <Link to="/config">Configuração </Link>
         <Link to="/listar">Listar</Link>
+        <Link to="/exemplo">Exemplo</Link>
       </div>
 
 
@@ -21,6 +23,7 @@ export default function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/listar" element={<List/>} />
         <Route path="/config" element={<Config/> }/>
+        <Route path="/exemplo" element={<Example/>}/>
 
         <Route path="/*" element={<NotFound/>}/>
       </Routes>
