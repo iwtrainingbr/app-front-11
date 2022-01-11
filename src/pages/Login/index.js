@@ -4,6 +4,8 @@ import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import TextField from '@mui/material/TextField';
 import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
+import match from './image/match.png';
 import './style.css';
 
 
@@ -16,32 +18,40 @@ export default function Login() {
          height: 500,
          backgroundColor:'#454d6b',
          color: '#ffffff',
-         ml: 60,
-         mt: 10
+         ml: 10
+
        }}
 
     >
     <form>
-          <div>
-              <h1 className="head">Login</h1>
-              <Divider/>
+
+          <div className="divhead">
+                <img src={match}/>
+
+                <Typography sx={{ml:5}} variant="h4">
+                    Entrar no We Macth!
+                </Typography>
           </div>
+
           <div className="acesso">
-            <TextField color="secondary" fullWidth label="Usuário" variant="standard" /><br/>
-            <TextField color="secondary" fullWidth label="Senha" variant="standard"/> <br/>
+            <TextField color="error" fullWidth label="Nome de usuário, e-mail ou celular" variant="standard" /><br/>
+            <TextField color="error" fullWidth label="Senha" variant="standard"/> <br/>
 
           </div>
 
           <div className="button">
-              <Button fullWidth color="secondary" size="large" variant="contained">Login</Button>
+              <Button fullWidth color="error" size="large" variant="contained">Avançar</Button>
           </div>
+
           <div className="ancora" >
 
               <Link href="#" color="white" underline="none">
                   {'Esqueceu a senha?'}
               </Link>
           </div>
-
+          <div className="button">
+            <Button fullWidth color="error" size="large" variant="outlined"> Criar uma conta</Button>
+          </div>
 
       </form>
 

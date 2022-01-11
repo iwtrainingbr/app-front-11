@@ -21,8 +21,9 @@ export default function App() {
             sx=
               {{
                 flexGrow: 1,
-                ml: 60,
-                mr: 56
+                width: 400,
+                ml: 10
+
               }}>
           <AppBar position="static">
             <Toolbar sx={{bgcolor: '#a13854'}}>
