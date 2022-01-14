@@ -12,11 +12,14 @@ import List from "./pages/List";
 import NotFound from "./pages/NotFound";
 import Config from "./pages/Config";
 import Example from "./pages/Example";
+import Navbar from "./pages/Navbar";
+import Footer from "./pages/Footer";
 import Carrinho from "./pages/Carrinho";
 
 export default function App() {
   return (
     <BrowserRouter>
+      <Navbar />
         <Box
             sx=
               {{
@@ -67,6 +70,7 @@ export default function App() {
 
         <Route path="/*" element={<NotFound/>}/>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
