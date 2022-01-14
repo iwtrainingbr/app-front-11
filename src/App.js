@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Sobre from "./pages/Sobre";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -15,6 +16,10 @@ import Example from "./pages/Example";
 import Navbar from "./components/Navbar";
 import Footer from "./pages/Footer";
 import Profile from "./pages/Profile";
+
+import Carrinho from "./pages/Carrinho";
+import ControlledAccordions from "./pages/Questions";
+import Cadastro from "./pages/Cadastro";
 import "./styles.css";
 
 export default function App() {
@@ -28,6 +33,9 @@ export default function App() {
         <Route path="/listar" element={<List/>} />
         <Route path="/config" element={<Config/> }/>
         <Route path="/profile" element={<Profile/> }/>
+        <Route path="/sobre" element={<Sobre/> }/>
+        <Route path="/questions" element={<ControlledAccordions/> }/>
+        <Route path="/cadastro" element={<Cadastro/> }/>
 
 
         <Route path="/*" element={<NotFound/>}/>
