@@ -1,9 +1,9 @@
 import * as React from 'react';
+import {Link} from "react-router-dom";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import match from './image/match.png';
 import './style.css';
@@ -36,18 +36,21 @@ export default function Login() {
           </div>
 
           <div className="button">
-              <Button fullWidth color="error" size="large" variant="contained">Avançar</Button>
+              <Button fullWidth color="error" size="large" variant="contained">
+                <Link to="/">AVANÇAR</Link>
+              </Button>
           </div>
 
-          <div className="ancora" >
-
-              <Link href="#" color="white" underline="none">
+          <div align="center" style={{marginTop: 20}}>
+              <Link to="/" color="white" underline="none">
                   {'Esqueceu a senha?'}
               </Link>
           </div>
           <div className="button">
-      
-            <Button fullWidth color="error" size="large" variant="outlined"> Criar uma conta</Button>
+
+            <Button fullWidth color="error" size="large" variant="outlined">
+              <Link to="/cadastro">Criar uma conta</Link>
+            </Button>
 
           </div>
 

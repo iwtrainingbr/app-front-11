@@ -1,46 +1,41 @@
 import * as React from 'react';
-import Sobre from "./pages/Sobre";
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
-import Login from "./pages/Login";
-import List from "./pages/List";
-import NotFound from "./pages/NotFound";
-import Config from "./pages/Config";
-import Example from "./pages/Example";
+import {AppBar, Box, Toolbar, LinearProgress, Typography, Button, IconButton} from '@mui/material';
+import {BrowserRouter, Link} from "react-router-dom";
+import MyRoutes from "./components/MyRoutes";
 import Navbar from "./components/Navbar";
 import Footer from "./pages/Footer";
-import Profile from "./pages/Profile";
 
-import Carrinho from "./pages/Carrinho";
-import ControlledAccordions from "./pages/Questions";
-import Cadastro from "./pages/Cadastro";
 import "./styles.css";
 
+import {createTheme, ThemeProvider} from "@mui/material/styles";
+
 export default function App() {
+
+  const myTheme = createTheme({
+    palette: {
+      primary: {
+        main: '#C90011'
+      },
+      secondary: {
+        main: '#00C9B8'
+      },
+      success: {
+        main: '#00645C'
+      }
+    }
+  });
+
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<h1>Inicio</h1>}/>
+      <ThemeProvider theme={myTheme}>
+        <Navbar/>
 
-        <Route path="/login" element={<Login/>} />
-        <Route path="/listar" element={<List/>} />
-        <Route path="/config" element={<Config/> }/>
-        <Route path="/profile" element={<Profile/> }/>
-        <Route path="/sobre" element={<Sobre/> }/>
-        <Route path="/questions" element={<ControlledAccordions/> }/>
-        <Route path="/cadastro" element={<Cadastro/> }/>
+        <MyRoutes/>
 
+          <LinearProgress/>
 
-        <Route path="/*" element={<NotFound/>}/>
-      </Routes>
-      <Footer />
+        <Footer />
+      </ThemeProvider>
     </BrowserRouter>
   );
 }
