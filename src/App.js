@@ -15,9 +15,8 @@ import Example from "./pages/Example";
 import Navbar from "./components/Navbar";
 import Footer from "./pages/Footer";
 import Carrinho from "./pages/Carrinho";
+import ControlledAccordions from "./pages/Questions";
 import Cadastro from "./pages/Cadastro";
-
-
 import "./styles.css";
 
 export default function App() {
@@ -30,6 +29,7 @@ export default function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/listar" element={<List/>} />
         <Route path="/config" element={<Config/> }/>
+        <Route path="/questions" element={<ControlledAccordions/> }/>
         <Route path="/cadastro" element={<Cadastro/> }/>
 
 
