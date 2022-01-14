@@ -1,25 +1,40 @@
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import {AppBar, Toolbar, Typography} from '@mui/material';
 import styles from './Navbar.module.css'
 
 function Navbar () {
     return (
-    <ul className={styles.list}>
-        <li className={styles.item}>
-            <Link to="/">Inicio</Link>
-        </li>
-        <li className={styles.item}>
-            <Link to="/login">Login</Link>
-        </li>
-        <li className={styles.item}>
-            <Link to="/config">Configuração </Link>
-        </li>
-        <li className={styles.item}>
-            <Link to="/listar">Listar</Link>
-        </li>
-        <li className={styles.item}>
-            <Link to="/exemplo">Exemplo</Link>
-        </li>
-    </ul>
+      <AppBar position="static">
+        <Toolbar sx={{bgcolor: '#a13854'}}>
+
+            <Typography>
+                  <Link  to="/">
+                      {'Inicio'}
+                  </Link>
+            </Typography>
+
+            <Typography ml={5}>
+                  <Link to="/login">
+                        {'Login'}
+                  </Link>
+            </Typography>
+
+            <Typography ml={5}>
+                  <Link to="/config">
+                      {'Configuração'}
+                  </Link>
+            </Typography>
+
+            <Typography ml={5}>
+                  <Link to="/listar">
+                      {'Listar'}
+                  </Link>
+            </Typography>
+
+
+
+        </Toolbar>
+      </AppBar>
     )
 }
 

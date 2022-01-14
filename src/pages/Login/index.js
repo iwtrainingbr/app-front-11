@@ -12,15 +12,11 @@ import './style.css';
 export default function Login() {
   return (
     <Box
-        component="form"
-       sx={{
-         width: 400,
-         height: 500,
-         backgroundColor:'#454d6b',
-         color: '#ffffff',
-         ml: 10
-
-       }}
+         sx={{
+           backgroundColor:'#454d6b',
+           color: '#ffffff',
+           p: 2,
+         }}
 
     >
     <form>
@@ -34,7 +30,7 @@ export default function Login() {
           </div>
 
           <div className="acesso">
-            <TextField color="error" fullWidth label="Nome de usuário, e-mail ou celular" variant="standard" /><br/>
+            <TextField color="error" style={{marginBottom: 20}} fullWidth label="Nome de usuário, e-mail ou celular" variant="standard" /><br/>
             <TextField color="error" fullWidth label="Senha" variant="standard"/> <br/>
 
           </div>
@@ -53,7 +49,7 @@ export default function Login() {
             <Button fullWidth color="error" size="large" variant="outlined"> Criar uma conta</Button>
           </div>
 
-    <form>
+    </form>
 
     </Box>
   );
