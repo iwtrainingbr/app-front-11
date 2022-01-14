@@ -1,13 +1,15 @@
+.acesso {
+  padding: 30px;
+  padding-top: 10px;
+  margin-top: 20px;
+
+}
+
 .head {
   padding-top: 30px;
   padding-left: 30px;
 }
-
-.acesso {
-  padding: 30px;
-  margin-top: 50px;
-
-}
+  
 .button {
   padding-top: 80px;
   padding-left: 30px;
@@ -18,4 +20,14 @@
   padding-top: 10px;
   margin-left: 130px;
 
+}
+
+img {
+  weight: 300px;
+  height: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
