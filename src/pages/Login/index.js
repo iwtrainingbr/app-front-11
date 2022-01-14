@@ -53,7 +53,7 @@ export default function Login() {
             <Button fullWidth color="error" size="large" variant="outlined"> Criar uma conta</Button>
           </div>
 
-      </form>
+    <form>
 
     </Box>
   );

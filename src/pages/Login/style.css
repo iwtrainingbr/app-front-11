@@ -4,12 +4,16 @@
   margin-top: 20px;
 
 }
-.button {
+
+.head {
   padding-top: 30px;
   padding-left: 30px;
+}
+  
+.button {
+  padding-top: 80px;
+  padding-left: 30px;
   padding-right: 30px;
-
-
 }
 
 .ancora {
