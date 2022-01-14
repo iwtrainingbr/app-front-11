@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Sobre from "./pages/Sobre";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/listar" element={<List/>} />
         <Route path="/config" element={<Config/> }/>
+        <Route path="/sobre" element={<Sobre/> }/>
         <Route path="/questions" element={<ControlledAccordions/> }/>
         <Route path="/cadastro" element={<Cadastro/> }/>
 

@@ -22,7 +22,7 @@ export default function Login() {
     <form>
 
           <div className="divhead">
-                <img src={match}/>
+                <img className="img-logo" src={match}/>
 
                 <Typography sx={{ml:5}} variant="h4">
                     Entrar no We Macth!
