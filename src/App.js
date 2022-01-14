@@ -15,6 +15,8 @@ import Config from "./pages/Config";
 import Example from "./pages/Example";
 import Navbar from "./components/Navbar";
 import Footer from "./pages/Footer";
+import Profile from "./pages/Profile";
+
 import Carrinho from "./pages/Carrinho";
 import ControlledAccordions from "./pages/Questions";
 import Cadastro from "./pages/Cadastro";
@@ -30,6 +32,7 @@ export default function App() {
         <Route path="/login" element={<Login/>} />
         <Route path="/listar" element={<List/>} />
         <Route path="/config" element={<Config/> }/>
+        <Route path="/profile" element={<Profile/> }/>
         <Route path="/sobre" element={<Sobre/> }/>
         <Route path="/questions" element={<ControlledAccordions/> }/>
         <Route path="/cadastro" element={<Cadastro/> }/>
