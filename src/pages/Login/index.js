@@ -46,7 +46,9 @@ export default function Login() {
               </Link>
           </div>
           <div className="button">
+      
             <Button fullWidth color="error" size="large" variant="outlined"> Criar uma conta</Button>
+
           </div>
 
     </form>
