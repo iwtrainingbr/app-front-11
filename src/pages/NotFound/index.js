@@ -8,7 +8,7 @@ function NotFound() {
   return (
     <div align='center'>
       <h1>Erro, pagina não encontrada</h1>
-      <h2><Button variant="contained"><Link to='/'>Click Aqui</Link></Button> para voltar ao inicio</h2>
+      <h2>Para voltar ao inicio <Button variant="contained"><Link to='/'>Click Aqui</Link></Button></h2>
       <img className='img' src={img}/>
     </div>
   )
