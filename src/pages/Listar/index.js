@@ -14,9 +14,10 @@ export default function Listar() {
   return (
     <div>
     <Card>
-            <CardContent variant="outlined" >
-              <CardMedia/><img src={male}/>
-            <Typography align="center" gutterBottom variant="h5" component="div">
+            <CardContent align="center" variant="outlined" >
+              <CardMedia />
+                  <img src={male} width="200" height="200" />
+            <Typography  gutterBottom variant="h5" component="div">
               Alessandro
             </Typography>
             <Typography variant="body2" color="text.secondary">
@@ -25,14 +26,15 @@ export default function Listar() {
             </Typography>
           </CardContent>
           <CardActions>
-            <Button variant="contained" size="small">Saiba mais</Button>
-            <Button variant="outlined" color="error" size="small">Descartar</Button>
+            <Button style={{marginLeft:"auto", marginRight:"auto"}} variant="contained" color="secondary" size="small">Saiba mais</Button>
+            <Button style={{marginLeft:"auto", marginRight:"auto"}} variant="contained" color="error" size="small">Descartar</Button>
           </CardActions>
     </Card>
 
       <Card>
-            <CardContent>
-                <CardMedia/> <img src={female}/>
+            <CardContent align="center">
+                <CardMedia/>
+                  <img src={female} width="200" height="200"/>
               <Typography align="center" gutterBottom variant="h5" component="div">
                 Mariana
               </Typography>
@@ -41,16 +43,16 @@ export default function Listar() {
                 species, ranging across all continents except Antarctica
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button variant="contained" size="small">Saiba mais</Button>
-              <Button variant="outlined" color="error" size="small">Descartar</Button>
+            <CardActions align="center">
+              <Button style={{marginLeft:"auto", marginRight:"auto"}} variant="contained" color="secondary" size="small">Saiba mais</Button>
+              <Button style={{marginLeft:"auto", marginRight:"auto"}} variant="contained" color="error" size="small">Descartar</Button>
             </CardActions>
         </Card>
 
         <Card>
-            <CardContent>
-              <CardMedia/> <img src={outros}/>
-              <Typography align="center" gutterBottom variant="h5" component="div">
+            <CardContent align="center">
+              <CardMedia/> <img src={outros} width="200" height="200"/>
+              <Typography gutterBottom variant="h5" component="div">
                 Outros
               </Typography>
               <Typography variant="body2" color="text.secondary">
@@ -59,8 +61,8 @@ export default function Listar() {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button variant="contained" size="small">Saiba mais</Button>
-              <Button variant="outlined" color="error" size="small">Descartar</Button>
+              <Button  style={{marginLeft:"auto", marginRight:"auto"}} variant="contained" color="secondary" size="small">Saiba mais</Button>
+              <Button style={{marginLeft:"auto", marginRight:"auto"}} align="center" variant="contained" color="error" size="small">Descartar</Button>
             </CardActions>
         </Card>
 
