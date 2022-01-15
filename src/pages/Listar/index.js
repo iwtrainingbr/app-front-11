@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import match from '../Login/image/match.png';
 import male from './limage/male.svg';
 import female from './limage/female.svg';
-import outros from './limage/outros.svg'
+import outros from './limage/outros.svg';
 
 export default function Listar() {
   return (
