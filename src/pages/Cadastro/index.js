@@ -8,8 +8,10 @@ import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import match from '../Login/image/match.png';
 
+
 export default function Cadastro (){
   return (
+   
 
     <Box
          sx={{
@@ -18,7 +20,9 @@ export default function Cadastro (){
            p: 2,
          }}
     >
+   
     <form>
+
           <div className="divhead">
                 <img src={match}/>
 
@@ -41,4 +45,13 @@ export default function Cadastro (){
     </form>
     </Box>
     );
+
+
+
+    </form>
+
+    </Box>
+    );
+
+
 }
