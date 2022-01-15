@@ -9,10 +9,9 @@ import Typography from '@mui/material/Typography';
 import match from '../Login/image/match.png';
 
 
-
-
 export default function Cadastro (){
   return (
+   
 
     <Box
          sx={{
@@ -20,8 +19,8 @@ export default function Cadastro (){
            color: 'aaaaaa',
            p: 2,
          }}
-
     >
+   
     <form>
 
           <div className="divhead">
@@ -43,6 +42,10 @@ export default function Cadastro (){
           <div className="button">
               <Button fullWidth color="error" size="large" variant="contained">SALVAR</Button>
           </div>
+    </form>
+    </Box>
+    );
+
 
 
     </form>
