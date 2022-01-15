@@ -42,6 +42,8 @@
 
 
 import * as React from 'react';
+import {useLocation} from "react-router-dom";
+
 import {Drawer} from "@mui/material";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -67,6 +69,7 @@ import DraftsIcon from '@mui/icons-material/Drafts';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 export default function Navbar() {
+  const url = useLocation();
   const [sidebar, setSidebar] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -82,6 +85,11 @@ export default function Navbar() {
     setAnchorEl(null);
   };
 
+
+  if (['/login', '/cadastro'].includes(url.pathname)) {
+    return (<></>);
+  }
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Drawer onClose={handleSidebar} open={sidebar} style={{width: 400}}>
@@ -89,17 +97,17 @@ export default function Navbar() {
    <nav aria-label="main mailbox folders">
      <List>
        <ListItem disablePadding>
-         <ListItemButton>
+         <ListItemButton onClick={handleSidebar}>
            <ListItemIcon>
              <InboxIcon />
            </ListItemIcon>
            <Link to="/">
-           <ListItemText primary="Início"/>
+            <ListItemText primary="Início"/>
            </Link>
          </ListItemButton>
        </ListItem>
          <ListItem disablePadding>
-           <ListItemButton>
+           <ListItemButton onClick={handleSidebar}>
              <ListItemIcon>
                <InboxIcon />
              </ListItemIcon>
@@ -109,7 +117,7 @@ export default function Navbar() {
            </ListItemButton>
          </ListItem>
            <ListItem disablePadding>
-             <ListItemButton>
+             <ListItemButton onClick={handleSidebar}>
                <ListItemIcon>
                  <InboxIcon />
                </ListItemIcon>
@@ -119,7 +127,7 @@ export default function Navbar() {
              </ListItemButton>
            </ListItem>
              <ListItem disablePadding>
-               <ListItemButton>
+               <ListItemButton onClick={handleSidebar}>
                  <ListItemIcon>
                    <InboxIcon />
                  </ListItemIcon>
@@ -129,7 +137,7 @@ export default function Navbar() {
                </ListItemButton>
              </ListItem>
                <ListItem disablePadding>
-                 <ListItemButton>
+                 <ListItemButton onClick={handleSidebar}>
                    <ListItemIcon>
                      <InboxIcon />
                    </ListItemIcon>
@@ -139,7 +147,7 @@ export default function Navbar() {
                  </ListItemButton>
                </ListItem>
                  <ListItem disablePadding>
-                   <ListItemButton>
+                   <ListItemButton onClick={handleSidebar}>
                      <ListItemIcon>
                        <InboxIcon />
                      </ListItemIcon>
@@ -149,7 +157,7 @@ export default function Navbar() {
                    </ListItemButton>
                  </ListItem>
                    <ListItem disablePadding>
-                     <ListItemButton>
+                     <ListItemButton onClick={handleSidebar}>
                        <ListItemIcon>
                          <InboxIcon />
                        </ListItemIcon>

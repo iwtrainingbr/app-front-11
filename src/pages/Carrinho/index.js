@@ -42,6 +42,11 @@ export default function Carrinho () {
           {quantity}
           <Button onClick={add} variant="outlined">+</Button>
         </CardContent>
+
+
+        <Button color="success" variant="contained">Sucesso</Button>
+        <Button color="error" variant="contained">Erro</Button>
+        <Button color="success" variant="contained">Sucesso</Button>
       </Card>
     </div>
   )

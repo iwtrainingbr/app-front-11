@@ -11,7 +11,7 @@ import match from '../Login/image/match.png';
 
 export default function Cadastro (){
   return (
-   
+
 
     <Box
          sx={{
@@ -20,7 +20,7 @@ export default function Cadastro (){
            p: 2,
          }}
     >
-   
+
     <form>
 
           <div className="divhead">
@@ -46,12 +46,6 @@ export default function Cadastro (){
     </Box>
     );
 
-
-
-    </form>
-
-    </Box>
-    );
 
 
 }
