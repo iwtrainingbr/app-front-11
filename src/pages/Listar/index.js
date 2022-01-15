@@ -10,7 +10,7 @@ import male from './limage/male.svg';
 import female from './limage/female.svg';
 import outros from './limage/outros.svg'
 
-export default function List() {
+export default function Listar() {
   return (
     <div>
     <Card>
