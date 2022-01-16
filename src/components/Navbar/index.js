@@ -101,9 +101,9 @@ export default function Navbar() {
            <ListItemIcon>
              <InboxIcon />
            </ListItemIcon>
-           <Link to="/">
-            <ListItemText primary="Início"/>
-           </Link>
+                <Link to="/">
+                  <ListItemText primary="Início"/>
+               </Link>
          </ListItemButton>
        </ListItem>
          <ListItem disablePadding>
@@ -111,9 +111,9 @@ export default function Navbar() {
              <ListItemIcon>
                <InboxIcon />
              </ListItemIcon>
-             <Link to="/Cadastro">
-             <ListItemText primary="Cadastro"/>
-             </Link>
+                 <Link to="/Cadastro">
+                      <ListItemText primary="Cadastro"/>
+                 </Link>
            </ListItemButton>
          </ListItem>
            <ListItem disablePadding>
@@ -121,9 +121,9 @@ export default function Navbar() {
                <ListItemIcon>
                  <InboxIcon />
                </ListItemIcon>
-               <Link to="ListarPerfis">
-               <ListItemText primary="Listar Perfis" />
-               </Link>
+                  <Link to="Listar">
+                      <ListItemText primary="Listar Perfis" />
+                  </Link>
              </ListItemButton>
            </ListItem>
              <ListItem disablePadding>
