@@ -26,7 +26,7 @@ import {
   Info as InfoIcon,
   Help as HelpIcon,
   Settings as SettingsIcon,
-} from "@muit/icons-material";
+} from "@mui/icons-material";
 import ListIcon from '@mui/icons-material/List';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import StartIcon from '@mui/icons-material/Start';
