@@ -3,7 +3,6 @@ import Login from "../../pages/Login";
 import Listar from "../../pages/Listar";
 import NotFound from "../../pages/NotFound";
 import Config from "../../pages/Config";
-import Example from "../../pages/Example";
 import Profile from "../../pages/Profile";
 import Carrinho from "../../pages/Carrinho";
 import ControlledAccordions from "../../pages/Questions";
