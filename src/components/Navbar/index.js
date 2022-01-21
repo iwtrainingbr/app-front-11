@@ -1,46 +1,3 @@
-// import {Link} from 'react-router-dom';
-// import {AppBar, Toolbar, Typography} from '@mui/material';
-// import styles from './Navbar.module.css'
-//
-// function Navbar () {
-//     return (
-//       <AppBar position="static">
-//         <Toolbar sx={{bgcolor: '#a13854'}}>
-//
-//             <Typography>
-//                   <Link  to="/">
-//                       {'Inicio'}
-//                   </Link>
-//             </Typography>
-//
-//             <Typography ml={5}>
-//                   <Link to="/login">
-//                         {'Login'}
-//                   </Link>
-//             </Typography>
-//
-//             <Typography ml={5}>
-//                   <Link to="/config">
-//                       {'Configuração'}
-//                   </Link>
-//             </Typography>
-//
-//             <Typography ml={5}>
-//                   <Link to="/listar">
-//                       {'Listar'}
-//                   </Link>
-//             </Typography>
-//
-//
-//
-//         </Toolbar>
-//       </AppBar>
-//     )
-// }
-//
-// export default Navbar
-
-
 import * as React from 'react';
 import {useLocation} from "react-router-dom";
 
@@ -66,7 +23,7 @@ import InboxIcon from '@mui/icons-material/Inbox';
 import DraftsIcon from '@mui/icons-material/Drafts';
  import {Link} from 'react-router-dom';
 import {
-  Info as InfoIcon, 
+  Info as InfoIcon,
   Help as HelpIcon,
   Settings as SettingsIcon,
 } from "@muit/icons-material";
@@ -128,9 +85,9 @@ export default function Navbar() {
                <ListItemIcon>
                  <ListIcon />
                </ListItemIcon>
-                  <Link to="Listar">
-                      <ListItemText primary="Listar Perfis" />
-                  </Link>
+               <Link to="listar">
+                <ListItemText primary="Listar Perfis" />
+               </Link>
              </ListItemButton>
            </ListItem>
              <ListItem disablePadding>
@@ -148,7 +105,7 @@ export default function Navbar() {
                    <ListItemIcon>
                      <HelpIcon />
                    </ListItemIcon>
-                   <Link to="/Ajuda">
+                   <Link to="/questions">
                    <ListItemText primary="Ajuda" />
                    </Link>
                  </ListItemButton>
