@@ -9,9 +9,10 @@ import Divider from '@mui/material/Divider';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import { styled } from '@mui/material/styles';
-import match from '../Login/image/match.png';
-import facebook from '../Login/image/facebook.png';
-import instagram from '../Login/image/instagram.png';
+import match from '../../pages/Login/image/match.png';
+import facebook from '../../pages/Login/image/facebook.png';
+import instagram from '../../pages/Login/image/instagram.png';
+import "./styles.scss";
 
 const Img = styled('img')({
   margin: 'auto',
@@ -19,14 +20,16 @@ const Img = styled('img')({
   display: 'block',
   width: 50,
   height: 30,
-
 });
 
-function Footer () {
 
-    return <footer>
-            <Box sx={{backgroundColor: '#454d6b'}}>
-            <Grid container>
+function Footer () {
+    return (
+      <footer className="footer">
+            <Box className="box">
+              Feito de nós pra nós
+
+              <Grid container style={{display: 'none'}}>
                   <Grid item xs={3} alignItems="center">
                   <img src={match} width="200" height="100"/>
                   </Grid>
@@ -88,6 +91,7 @@ function Footer () {
 
 
     </footer>
+  );
 }
 
 export default Footer

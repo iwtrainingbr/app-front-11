@@ -26,6 +26,7 @@ import {
   Info as InfoIcon,
   Help as HelpIcon,
   Settings as SettingsIcon,
+  Place as PlaceIcon
 } from "@mui/icons-material";
 import ListIcon from '@mui/icons-material/List';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
@@ -120,17 +121,27 @@ export default function Navbar() {
                      </Link>
                    </ListItemButton>
                  </ListItem>
-                   <ListItem disablePadding>
-                     <ListItemButton onClick={handleSidebar}>
-                       <ListItemIcon>
-                         <LogoutIcon />
-                       </ListItemIcon>
-                       <Link to="/Sair">
-                       <ListItemText primary="Sair" />
-                       </Link>
-                     </ListItemButton>
-                   </ListItem>
-                   </List>
+           <ListItem disablePadding>
+             <ListItemButton onClick={handleSidebar}>
+               <ListItemIcon>
+                 <PlaceIcon />
+               </ListItemIcon>
+               <Link to="/cidades">
+                <ListItemText primary="Cidades" />
+               </Link>
+             </ListItemButton>
+           </ListItem>
+           <ListItem disablePadding>
+             <ListItemButton onClick={handleSidebar}>
+               <ListItemIcon>
+                 <LogoutIcon />
+               </ListItemIcon>
+               <Link to="/login">
+               <ListItemText primary="Sair" />
+               </Link>
+             </ListItemButton>
+           </ListItem>
+         </List>
        </nav>
        </Box>
       </Drawer>

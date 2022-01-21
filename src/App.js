@@ -3,7 +3,7 @@ import {AppBar, Box, Toolbar, LinearProgress, Typography, Button, IconButton} fr
 import {BrowserRouter, Link} from "react-router-dom";
 import MyRoutes from "./components/MyRoutes";
 import Navbar from "./components/Navbar";
-import Footer from "./pages/Footer";
+import Footer from "./components/Footer";
 
 import "./styles.css";
 
@@ -31,8 +31,6 @@ export default function App() {
         <Navbar/>
 
         <MyRoutes/>
-
-          <LinearProgress/>
 
         <Footer />
       </ThemeProvider>
