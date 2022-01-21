@@ -6,7 +6,10 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function ControlledAccordions() {
-  const [faq, setFaq] = React.useState([
+  const [faq, setFaq] = React.useState();
+  const [expanded, setExpanded] = React.useState(false);
+
+  setFaq([
     {
       question: "Como funciona",
       answer: "Funciona assim bla bla bla",
@@ -28,7 +31,6 @@ export default function ControlledAccordions() {
       answer: "Não.",
     },
   ]);
-  const [expanded, setExpanded] = React.useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
