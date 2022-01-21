@@ -1,32 +1,41 @@
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import * as React from 'react';
+import {AppBar, Box, Toolbar, LinearProgress, Typography, Button, IconButton} from '@mui/material';
+import {BrowserRouter, Link} from "react-router-dom";
+import MyRoutes from "./components/MyRoutes";
+import Navbar from "./components/Navbar";
+import Footer from "./pages/Footer";
 
-import Login from "./pages/Login";
-import List from "./pages/List";
-import NotFound from "./pages/NotFound";
-import Config from "./pages/Config";
-import Example from "./pages/Example";
+import "./styles.css";
+
+import {createTheme, ThemeProvider} from "@mui/material/styles";
 
 export default function App() {
+
+  const myTheme = createTheme({
+    palette: {
+      primary: {
+        main: '#C90011'
+      },
+      secondary: {
+        main: '#00C9B8'
+      },
+      success: {
+        main: '#00645C'
+      }
+    }
+  });
+
   return (
     <BrowserRouter>
-      <div>
-        <Link to="/">Inicio</Link>
-        <Link to="/login">Login</Link>
-        <Link to="/config">Configuração </Link>
-        <Link to="/listar">Listar</Link>
-        <Link to="/exemplo">Exemplo</Link>
-      </div>
+      <ThemeProvider theme={myTheme}>
+        <Navbar/>
 
+        <MyRoutes/>
 
-      <Routes>
-        <Route path="/" element={<h1>Inicio</h1>}/>
-        <Route path="/login" element={<Login/>} />
-        <Route path="/listar" element={<List/>} />
-        <Route path="/config" element={<Config/> }/>
-        <Route path="/exemplo" element={<Example/>}/>
+          <LinearProgress/>
 
-        <Route path="/*" element={<NotFound/>}/>
-      </Routes>
+        <Footer />
+      </ThemeProvider>
     </BrowserRouter>
   );
 }
