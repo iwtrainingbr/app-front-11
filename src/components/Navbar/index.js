@@ -44,8 +44,7 @@
 import * as React from 'react';
 import {useLocation} from "react-router-dom";
 
-import {Drawer} from "@mui/material";
-import AppBar from '@mui/material/AppBar';
+import {Drawer, AppBar} from "@mui/material";
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -66,7 +65,15 @@ import Divider from '@mui/material/Divider';
 import InboxIcon from '@mui/icons-material/Inbox';
 import DraftsIcon from '@mui/icons-material/Drafts';
  import {Link} from 'react-router-dom';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import {
+  Info as InfoIcon, 
+  Help as HelpIcon,
+  Settings as SettingsIcon,
+} from "@muit/icons-material";
+import ListIcon from '@mui/icons-material/List';
+import HowToRegIcon from '@mui/icons-material/HowToReg';
+import StartIcon from '@mui/icons-material/Start';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 export default function Navbar() {
   const url = useLocation();
@@ -93,13 +100,13 @@ export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Drawer onClose={handleSidebar} open={sidebar} style={{width: 400}}>
-      <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+      <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper'}}>
    <nav aria-label="main mailbox folders">
      <List>
        <ListItem disablePadding>
          <ListItemButton onClick={handleSidebar}>
            <ListItemIcon>
-             <InboxIcon />
+             <StartIcon />
            </ListItemIcon>
                 <Link to="/">
                   <ListItemText primary="Início"/>
@@ -109,7 +116,7 @@ export default function Navbar() {
          <ListItem disablePadding>
            <ListItemButton onClick={handleSidebar}>
              <ListItemIcon>
-               <InboxIcon />
+               <HowToRegIcon />
              </ListItemIcon>
                  <Link to="/Cadastro">
                       <ListItemText primary="Cadastro"/>
@@ -119,7 +126,7 @@ export default function Navbar() {
            <ListItem disablePadding>
              <ListItemButton onClick={handleSidebar}>
                <ListItemIcon>
-                 <InboxIcon />
+                 <ListIcon />
                </ListItemIcon>
                   <Link to="Listar">
                       <ListItemText primary="Listar Perfis" />
@@ -129,7 +136,7 @@ export default function Navbar() {
              <ListItem disablePadding>
                <ListItemButton onClick={handleSidebar}>
                  <ListItemIcon>
-                   <InboxIcon />
+                   <SettingsIcon />
                  </ListItemIcon>
                  <Link to="/Config">
                  <ListItemText primary="Configuração" />
@@ -139,7 +146,7 @@ export default function Navbar() {
                <ListItem disablePadding>
                  <ListItemButton onClick={handleSidebar}>
                    <ListItemIcon>
-                     <InboxIcon />
+                     <HelpIcon />
                    </ListItemIcon>
                    <Link to="/Ajuda">
                    <ListItemText primary="Ajuda" />
@@ -149,7 +156,7 @@ export default function Navbar() {
                  <ListItem disablePadding>
                    <ListItemButton onClick={handleSidebar}>
                      <ListItemIcon>
-                       <InboxIcon />
+                       <InfoIcon />
                      </ListItemIcon>
                      <Link to="/Sobre">
                      <ListItemText primary="Sobre o App" />
@@ -159,7 +166,7 @@ export default function Navbar() {
                    <ListItem disablePadding>
                      <ListItemButton onClick={handleSidebar}>
                        <ListItemIcon>
-                         <InboxIcon />
+                         <LogoutIcon />
                        </ListItemIcon>
                        <Link to="/Sair">
                        <ListItemText primary="Sair" />
