@@ -44,8 +44,7 @@
 import * as React from 'react';
 import {useLocation} from "react-router-dom";
 
-import {Drawer} from "@mui/material";
-import AppBar from '@mui/material/AppBar';
+import {Drawer, AppBar} from "@mui/material";
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -66,9 +65,11 @@ import Divider from '@mui/material/Divider';
 import InboxIcon from '@mui/icons-material/Inbox';
 import DraftsIcon from '@mui/icons-material/Drafts';
  import {Link} from 'react-router-dom';
-import InfoIcon from '@mui/icons-material/Info';
-import HelpIcon from '@mui/icons-material/Help';
-import SettingsIcon from '@mui/icons-material/Settings';
+import {
+  Info as InfoIcon, 
+  Help as HelpIcon,
+  Settings as SettingsIcon,
+} from "@muit/icons-material";
 import ListIcon from '@mui/icons-material/List';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import StartIcon from '@mui/icons-material/Start';
