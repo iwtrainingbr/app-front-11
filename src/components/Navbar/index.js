@@ -130,6 +130,16 @@ export default function Navbar() {
            <ListItem disablePadding>
              <ListItemButton onClick={handleSidebar}>
                <ListItemIcon>
+                 <HelpIcon/>
+               </ListItemIcon>
+               <Link to="/questionsusers">
+               <ListItemText primary="Perguntas Usuarios" />
+               </Link>
+             </ListItemButton>
+           </ListItem>
+           <ListItem disablePadding>
+             <ListItemButton onClick={handleSidebar}>
+               <ListItemIcon>
                  <LogoutIcon />
                </ListItemIcon>
                <Link to="/login">
