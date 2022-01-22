@@ -42,7 +42,7 @@ export default function Login() {
           </div>
 
           <div align="center" style={{marginTop: 20}}>
-              <Link to="/" color="white" underline="none">
+              <Link to="/esqueceusenha" color="white" underline="none">
                   {'Esqueceu a senha?'}
               </Link>
           </div>
