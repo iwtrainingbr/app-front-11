@@ -9,8 +9,12 @@ import ControlledAccordions from "../../pages/Questions";
 import Cadastro from "../../pages/Cadastro";
 import Sobre from "../../pages/Sobre";
 import Cities from "../../pages/Cities";
+
+import EsqueceuSenha from "../../pages/EsqueceuSenha";
+
 import QuestionsUsers from "../../pages/QuestionsUsers";
 import Categorias from "../../pages/Categorias";
+
 
 export default function MyRoutes() {
   return (
@@ -26,6 +30,7 @@ export default function MyRoutes() {
       <Route path="/cadastro" element={<Cadastro/> }/>
       <Route path="/carrinho" element={<Carrinho/> }/>
       <Route path="/cidades" element={<Cities/> }/>
+      <Route path="/esqueceusenha" element={<EsqueceuSenha/> }/>
 
       <Route path="/questionsusers" element={<QuestionsUsers/> }/>
 
