@@ -33,6 +33,7 @@ import HowToRegIcon from '@mui/icons-material/HowToReg';
 import StartIcon from '@mui/icons-material/Start';
 import LogoutIcon from '@mui/icons-material/Logout';
 
+
 export default function Navbar() {
   const url = useLocation();
   const [sidebar, setSidebar] = React.useState(false);
@@ -141,6 +142,18 @@ export default function Navbar() {
                </Link>
              </ListItemButton>
            </ListItem>
+
+           
+             <ListItem disablePadding>
+               <ListItemButton onClick={handleSidebar}>
+                 <ListItemIcon>
+                   <HowToRegIcon />
+                 </ListItemIcon>
+                     <Link to="/Categorias">
+                          <ListItemText primary="Categorias"/>
+                     </Link>
+               </ListItemButton>
+             </ListItem>
          </List>
        </nav>
        </Box>
