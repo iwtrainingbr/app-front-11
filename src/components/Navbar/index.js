@@ -148,7 +148,7 @@ export default function Navbar() {
              </ListItemButton>
            </ListItem>
 
-           
+
              <ListItem disablePadding>
                <ListItemButton onClick={handleSidebar}>
                  <ListItemIcon>
