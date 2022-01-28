@@ -6,7 +6,7 @@ import {Divider, Typography, Stack,Button,CardActionArea} from '@mui/material';
 import {QuestionAnswer, Person, ListAlt} from '@mui/icons-material';
 const API_URL = 'https://front-11-project-default-rtdb.firebaseio.com';
 export default function Dash() {
-  //const [users, setUsers] = useState([]);  
+  //const [users, setUsers] = useState([]);
     const urlUsuarios = API_URL+'/users.json'
     const urlperguntas = API_URL+'/questions.json'
     const urlcategorias = API_URL+'/categories.json'
@@ -14,17 +14,17 @@ export default function Dash() {
     fetch(urlUsuarios)
     .then(response => response.json())
     .then(users => {
-      document.getElementById('user_dash').innerHTML=Object.keys(users).length;    
+      document.getElementById('user_dash').innerHTML=Object.keys(users).length;
     })
     fetch(urlperguntas)
     .then(response => response.json())
     .then(questions => {
-      document.getElementById('questions_dash').innerHTML=Object.keys(questions).length;    
+      document.getElementById('questions_dash').innerHTML=Object.keys(questions).length;
     })
     fetch(urlcategorias)
     .then(response => response.json())
     .then(category => {
-      document.getElementById('category_dash').innerHTML=Object.keys(category).length;    
+      document.getElementById('category_dash').innerHTML=Object.keys(category).length;
     })
 })
   return (
@@ -67,7 +67,7 @@ export default function Dash() {
                 </Typography>
               </CardContent>
             </CardActionArea>
-          </Card>  
+          </Card>
           <Divider/>
           <Card style={{marginBottom: 20}}>
             <CardActionArea >
@@ -87,7 +87,7 @@ export default function Dash() {
                 </Typography>
               </CardContent>
             </CardActionArea>
-          </Card>      
+          </Card>
 </div>
 );
 }

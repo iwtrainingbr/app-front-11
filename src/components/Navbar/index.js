@@ -22,7 +22,7 @@ import {
   Help as HelpIcon,
   Settings as SettingsIcon,
   Place as PlaceIcon
-  
+
 } from "@mui/icons-material";
 import ListIcon from '@mui/icons-material/List';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
@@ -169,6 +169,7 @@ export default function Navbar() {
       <AppBar position="static">
         <Toolbar>
           <IconButton
+            data-cy="btn-menu"
             size="large"
             edge="start"
             color="inherit"
