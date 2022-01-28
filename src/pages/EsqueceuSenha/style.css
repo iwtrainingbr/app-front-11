@@ -1,0 +1,18 @@
+main {
+    font-family: Roboto, sans-serif;
+    background-color: rgb(86, 201, 247);
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    padding: 20px 0px;
+}
+
+main div.recuperar {
+    color: black;
+    background-color: #fff;
+    padding: 30px 56px;
+    border-radius: 10px;
+    min-width: 300px;
+    max-width: 500px;
+    margin: auto;
+}

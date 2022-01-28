@@ -8,9 +8,6 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import Switch from '@mui/material/Switch';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import List from '@mui/material/List';
@@ -18,19 +15,21 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
-import InboxIcon from '@mui/icons-material/Inbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
+
  import {Link} from 'react-router-dom';
 import {
   Info as InfoIcon,
   Help as HelpIcon,
   Settings as SettingsIcon,
+  Place as PlaceIcon
+  
 } from "@mui/icons-material";
 import ListIcon from '@mui/icons-material/List';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import StartIcon from '@mui/icons-material/Start';
 import LogoutIcon from '@mui/icons-material/Logout';
+import QuestionMark from '@mui/icons-material/QuestionMark';
+
 
 export default function Navbar() {
   const url = useLocation();
@@ -120,17 +119,49 @@ export default function Navbar() {
                      </Link>
                    </ListItemButton>
                  </ListItem>
-                   <ListItem disablePadding>
-                     <ListItemButton onClick={handleSidebar}>
-                       <ListItemIcon>
-                         <LogoutIcon />
-                       </ListItemIcon>
-                       <Link to="/Sair">
-                       <ListItemText primary="Sair" />
-                       </Link>
-                     </ListItemButton>
-                   </ListItem>
-                   </List>
+           <ListItem disablePadding>
+             <ListItemButton onClick={handleSidebar}>
+               <ListItemIcon>
+                 <PlaceIcon />
+               </ListItemIcon>
+               <Link to="/cidades">
+                <ListItemText primary="Cidades" />
+               </Link>
+             </ListItemButton>
+           </ListItem>
+           <ListItem disablePadding>
+             <ListItemButton onClick={handleSidebar}>
+               <ListItemIcon>
+                 <QuestionMark/>
+               </ListItemIcon>
+               <Link to="/questionsusers">
+               <ListItemText primary="Perguntas Usuarios" />
+               </Link>
+             </ListItemButton>
+           </ListItem>
+           <ListItem disablePadding>
+             <ListItemButton onClick={handleSidebar}>
+               <ListItemIcon>
+                 <LogoutIcon />
+               </ListItemIcon>
+               <Link to="/login">
+               <ListItemText primary="Sair" />
+               </Link>
+             </ListItemButton>
+           </ListItem>
+
+
+             <ListItem disablePadding>
+               <ListItemButton onClick={handleSidebar}>
+                 <ListItemIcon>
+                   <HowToRegIcon />
+                 </ListItemIcon>
+                     <Link to="/Categorias">
+                          <ListItemText primary="Categorias"/>
+                     </Link>
+               </ListItemButton>
+             </ListItem>
+         </List>
        </nav>
        </Box>
       </Drawer>

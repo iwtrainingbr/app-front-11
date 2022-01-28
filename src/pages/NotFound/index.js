@@ -13,7 +13,7 @@ function NotFound() {
           <Link to='/'>Click Aqui</Link>
         </Button>
       </h2>
-      <img className='img' src={img}/>
+      <img alt="não-encontrado" className='img' src={img}/>
     </div>
   )
 }

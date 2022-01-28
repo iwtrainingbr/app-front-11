@@ -18,9 +18,15 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import sobre from './sobre.png';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import Link from '@mui/material/Link';
+
 
 export default function ImgMediaCard() {
   return (
+      <div>
     <Card>
       <CardMedia
         component="img"
@@ -38,7 +44,20 @@ export default function ImgMediaCard() {
       <CardActions>
         <Button size="small">Compartilhar</Button>
         <Button size="small">Saiba mais</Button>
+        <Link  className="sobreLink" href="https://pt-br.facebook.com/">
+            <FacebookIcon sx={{width:90, fontSize: 60}}/>
+        </Link>
+        <Link className="sobreLink" href="https://www.instagram.com/">
+          <InstagramIcon sx={{width: 90, fontSize:60}}/>
+        </Link>
+        <Link href="https://twitter.com/">
+          <TwitterIcon sx={{width: 90, fontSize: 60}}/>
+        </Link>
       </CardActions>
+
     </Card>
+
+
+    </div>
   );
 }
