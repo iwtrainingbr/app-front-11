@@ -1,19 +1,23 @@
+import {useState} from "react";
 import {Switch} from  "@mui/material";
 import {createTheme, ThemeProvider} from "@mui/material/styles";
 
 
-export default function Config(){
+export default function Config(props){
+  const [darkmode, setDarkmode] = useState(false);
 
-//  function mudarCor(){
-    //<ThemeProvider theme={darkTheme}>
-  //  </ThemeProvider>
-  //}
+  const handleDarkmode = () => {
+    setDarkmode(!darkmode);
+    props.handleTheme(!darkmode);
+  };
+
   return(
 
     <div>
-    <h1>Página de configuração</h1>
-    <Switch />
-    Modo Escuro
+      <h1>Página de configuração</h1>
+
+      <Switch checked={darkmode} onChange={handleDarkmode} />
+      Modo Escuro
     </div>
 
   )
