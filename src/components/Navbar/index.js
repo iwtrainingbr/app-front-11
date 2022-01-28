@@ -22,11 +22,13 @@ import {
   Help as HelpIcon,
   Settings as SettingsIcon,
   Place as PlaceIcon
+  
 } from "@mui/icons-material";
 import ListIcon from '@mui/icons-material/List';
 import HowToRegIcon from '@mui/icons-material/HowToReg';
 import StartIcon from '@mui/icons-material/Start';
 import LogoutIcon from '@mui/icons-material/Logout';
+import QuestionMark from '@mui/icons-material/QuestionMark';
 
 
 export default function Navbar() {
@@ -130,7 +132,7 @@ export default function Navbar() {
            <ListItem disablePadding>
              <ListItemButton onClick={handleSidebar}>
                <ListItemIcon>
-                 <HelpIcon/>
+                 <QuestionMark/>
                </ListItemIcon>
                <Link to="/questionsusers">
                <ListItemText primary="Perguntas Usuarios" />
