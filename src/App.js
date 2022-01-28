@@ -24,6 +24,20 @@ export default function App() {
     }
   });
 
+  const darkTheme = createTheme({
+    palette: {
+      primary: {
+        main: '#fff'
+      },
+      secondary: {
+        main: '#999'
+      },
+      success: {
+        main: '#bcbcbc'
+      }
+    }
+  });
+
   return (
     <BrowserRouter>
       <ThemeProvider theme={myTheme}>

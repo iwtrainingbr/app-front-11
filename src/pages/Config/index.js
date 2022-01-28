@@ -1,19 +1,20 @@
-import Switch from '@mui/material/Switch';
+import {Switch} from  "@mui/material";
+import {createTheme, ThemeProvider} from "@mui/material/styles";
 
 
-export default function Config() {
-  const mudarCor = () => {
-    alert('alterando');
-  }
+export default function Config(){
 
-  return (
+//  function mudarCor(){
+    //<ThemeProvider theme={darkTheme}>
+  //  </ThemeProvider>
+  //}
+  return(
+
     <div>
-      <Switch onChange={mudarCor}/>
-      Modo Escuro
-      <br></br>
-      <Switch/>
-      Modo Claro
-
+    <h1>Página de configuração</h1>
+    <Switch />
+    Modo Escuro
     </div>
+
   )
 }
