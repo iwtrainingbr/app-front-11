@@ -12,9 +12,9 @@ export default function EsqueceuSenha() {
             <h1>Equecei minha Senha</h1>
             <div className='recuperar'>
                 <h3>Informe o mesmo email que você usou quando você cadastrou para trocar sua senha.</h3>
-                <TextField color="error" fullWidth label="Email" variant="outlined"/>
+                <TextField data-cy="email" color="error" fullWidth label="Email" variant="outlined"/>
                 <br/><br/>
-                <Button fullWidth color="info" size="large" variant="contained" onClick={mudarSenha}>Recuperar Senha</Button>
+                <Button data-cy="enviar" fullWidth color="info" size="large" variant="contained" onClick={mudarSenha}>Recuperar Senha</Button>
             </div>
         
         </main>
