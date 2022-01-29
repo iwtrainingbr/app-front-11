@@ -77,15 +77,15 @@ export default function Cadastro (){
           </div>
 
           <div className="acesso">
-            <TextField color="error"  fullWidth label="NOME COMPLETO" value={nome} onChange={alterarNome} variant="standard"/><br/>
-            <TextField color="error" fullWidth label="EMAIL" value={email} onChange={alterarEmail} variant="standard"/> <br/>
-            <TextField color="error" fullWidth label="TELEFONE" value={telefone} onChange={alterarTelefone} variant="standard"/> <br/>
-            <TextField color="error" fullWidth label="SENHA"  value={senha} onChange={alterarSenha} variant="standard"/> <br/>
+            <TextField color="error" id="nome" fullWidth label="NOME COMPLETO" value={nome} onChange={alterarNome} variant="standard"/><br/>
+            <TextField color="error" id="email" fullWidth label="EMAIL" value={email} onChange={alterarEmail} variant="standard"/> <br/>
+            <TextField color="error" id="telefone" fullWidth label="TELEFONE" value={telefone} onChange={alterarTelefone} variant="standard"/> <br/>
+            <TextField color="error" id="senha" fullWidth label="SENHA"  value={senha} onChange={alterarSenha} variant="standard"/> <br/>
 
           </div>
 
           <div className="button">
-              <Button fullWidth color="error" size="large" variant="contained" onClick={validar}>SALVAR</Button>
+              <Button fullWidth color="error" id="salvar" size="large" variant="contained" onClick={validar}>SALVAR</Button>
           </div>
     </form>
     </Box>

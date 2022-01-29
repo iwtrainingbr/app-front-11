@@ -75,7 +75,7 @@ export default function Navbar() {
                <HowToRegIcon />
              </ListItemIcon>
                  <Link to="/Cadastro">
-                      <ListItemText primary="Cadastro"/>
+                      <ListItemText data-cy="menu-cadastro" primary="Cadastro"/>
                  </Link>
            </ListItemButton>
          </ListItem>
