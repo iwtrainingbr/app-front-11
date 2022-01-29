@@ -153,11 +153,12 @@ export default function Navbar() {
 
              <ListItem disablePadding>
                <ListItemButton onClick={handleSidebar}>
-                 <ListItemIcon>
+                 <ListItemIcon >
                    <HowToRegIcon />
-                 </ListItemIcon>
+                 </ListItemIcon >
                      <Link to="/Categorias">
-                          <ListItemText primary="Categorias"/>
+                          <ListItemText  
+                          data-cy="categorias" primary="Categorias"/>
                      </Link>
                </ListItemButton>
              </ListItem>
