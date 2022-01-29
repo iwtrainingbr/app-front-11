@@ -94,7 +94,7 @@ export default function Navbar() {
                  <ListItemIcon>
                    <SettingsIcon />
                  </ListItemIcon>
-                 <Link to="/Config">
+                 <Link to="/Config" data-cy="btn-config">
                  <ListItemText primary="Configuração" />
                  </Link>
                </ListItemButton>
@@ -179,7 +179,7 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} data-cy="navbar">
             we match
           </Typography>
             <div>
