@@ -16,7 +16,7 @@ export default function Config(props){
     <div>
       <h1>Página de configuração</h1>
 
-      <Switch checked={darkmode} onChange={handleDarkmode} />
+      <Switch checked={darkmode} onChange={handleDarkmode} data-cy="btn-dark-mode" />
       Modo Escuro
     </div>
 
