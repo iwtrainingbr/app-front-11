@@ -52,13 +52,13 @@ export default function Login() {
           </div>
 
           <div className="acesso">
-            <TextField color="error" style={{marginBottom: 20}} onChange={(event) => setEmail(event.target.value)} value={email} fullWidth label="Nome de usuário, e-mail ou celular" variant="standard" /><br/>
-            <TextField color="error" fullWidth label="Senha" onChange={(event) => setSenha(event.target.value)} value={senha} type="password" variant="standard" />  <br/>
+            <TextField data-cy="usu" color="error" style={{marginBottom: 20}} onChange={(event) => setEmail(event.target.value)} value={email} fullWidth label="Nome de usuário, e-mail ou celular" variant="standard" /><br/>
+            <TextField data-cy="pass" color="error" fullWidth label="Senha" onChange={(event) => setSenha(event.target.value)} value={senha} type="password" variant="standard" />  <br/>
 
           </div>
 
           <div className="button">
-              <Button fullWidth color="error" size="large" onClick={validar} variant="contained">
+              <Button data-cy="avançar" fullWidth color="error" size="large" onClick={validar} variant="contained">
                 <Link to="/">AVANÇAR</Link>
               </Button>
           </div>
