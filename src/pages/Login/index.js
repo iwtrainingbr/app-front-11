@@ -64,7 +64,7 @@ export default function Login() {
           </div>
 
           <div align="center" style={{marginTop: 20}}>
-              <Link to="/esqueceusenha" color="white" underline="none">
+              <Link data-cy="esqueceu" to="/esqueceusenha" color="white" underline="none">
                   {'Esqueceu a senha?'}
               </Link>
           </div>
