@@ -1,7 +1,6 @@
 
 import {useState} from 'react';
 import {useNavigate} from "react-router-dom";
-
 import {Box} from '@mui/material';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
@@ -9,6 +8,10 @@ import TextField from '@mui/material/TextField';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import match from '../Login/image/match.png';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
+
 
 
 export default function Cadastro (){
@@ -17,6 +20,21 @@ export default function Cadastro (){
   const [email,setEmail] = useState("");
   const [telefone,setTelefone] = useState("");
   const [senha,setSenha] = useState("");
+ const [open, setOpen] = useState(false);
+
+
+ const handleClick = () => {
+   setOpen(true);
+ };
+
+ const handleClose = (event, reason) => {
+   if (reason === 'clickaway') {
+     return;
+   }
+
+ setOpen(false);
+
+};
 
   function alterarNome (event) {
     setNome(event.target.value);
@@ -39,7 +57,7 @@ export default function Cadastro (){
   function validar () {
 
     if (nome === ""){
-      alert ('Preencha o Nome');
+      handleClick();
       return
     }if(email=== ""){
       alert ('Preencha o Email');
@@ -71,6 +89,12 @@ export default function Cadastro (){
           <div className="divhead">
                 <img src={match}/>
 
+
+                  <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+                     <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+                       This is a success message!
+                     </Alert>
+                   </Snackbar>
                 <Typography sx={{ml:5}} variant="h4">
                     FAÇA SEU CADASTRO
                 </Typography>
