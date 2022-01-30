@@ -1,4 +1,4 @@
-describe('testar pagina de cidade', () => {
+describe('testar pagina de categorias', () => {
     before(() => {
       cy.visit('http://localhost:3000');
     });
