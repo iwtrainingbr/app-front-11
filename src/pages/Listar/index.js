@@ -9,7 +9,40 @@ import match from '../Login/image/match.png';
 import male from './limage/male.svg';
 import female from './limage/female.svg';
 import outros from './limage/outros.svg';
+import {useNavigate} from "react-router-dom";
+import {useState, useEffect} from "react";
+import {Divider} from "@mui/material";
+const API_URL = 'https://front-11-project-default-rtdb.firebaseio.com';
 
+export default function Listar(){
+  const [lista, setLista] = useState([]);
+
+  useEffect(() => {
+    fetch (API_URL+'/users.json')
+      .then(response => response.json())
+      .then(response => {
+        let lista = [];
+
+        for (let id in response) {
+          lista.push(response[id]);
+        }
+
+        setLista(lista);
+      });
+  }, [])
+  return (
+    <div>
+      <h2>listar perfis</h2>
+      <Divider/>
+      <ul>
+        {lista.map(cadaLista =>  (
+            <li>{cadaLista.name}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+/*
 export default function Listar() {
   return (
     <div>
@@ -71,3 +104,4 @@ export default function Listar() {
         </div>
   );
 }
+*/
