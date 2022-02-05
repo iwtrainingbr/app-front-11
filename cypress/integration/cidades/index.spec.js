@@ -1,5 +1,6 @@
 describe('testar pagina de cidade', () => {
   before(() => {
+    cy.viewport('iphone-6');
     cy.visit('http://localhost:3000');
   });
 

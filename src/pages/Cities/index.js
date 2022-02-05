@@ -27,6 +27,11 @@ export default function Cities() {
 
       <Divider/>
 
+      <ul>
+        {data.map(city => (
+          <li>{city.name}</li>
+        ))}
+      </ul>
     </div>
   )
 }

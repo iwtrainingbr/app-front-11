@@ -1,6 +1,6 @@
 describe('testar pagina de configuração', () => {
   before(() => {
-    cy.visit('http://localhost:3000');
+    cy.visit();
   });
 
   it ('should change to dark mode', () => {
